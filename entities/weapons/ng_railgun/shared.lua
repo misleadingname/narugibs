@@ -92,7 +92,7 @@ function SWEP:SecondaryAttack()
 			self.cantDash = self.cantDash + 1
 			if(self.cantDash == 10) then
 				self.Owner:EmitSound(denySound)
-				notification.AddLegacy("To dash, you need to be mid air || not already be dashing.", NOTIFY_HINT, 5)
+				notification.AddLegacy("To dash, you need to be mid air or not already be dashing.", NOTIFY_HINT, 5)
 				self.cantDash = 0
 			end
 		end
