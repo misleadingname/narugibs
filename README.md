@@ -4,7 +4,7 @@
 <p>It's mostly unfinished, and a little rough around the edges but it's a start.</p>
 <p>It is a work in progress, and I'm not sure if it will ever be finished, but hey if I find the motivation then, maybe I guess.</p>
 <hr />
-<1>How to play:</h>
+<h3>How to play:</h3>
 <p>When the game starts, the only weapon you have is a railgun. You can shoot it like any other gun.</p>
 <p>There's a dash ability, that allows you to... dash, I can't make it sound epic enough to put in the description, but it's pretty cool.</p>
 <br>
