@@ -52,32 +52,34 @@ function GM:GetFallDamage()
 end
 
 function GM:PlayerDeath(victim, inflictor, attacker)
-	if(!IsValid(victim) or !IsValid(attacker)) then return end
+	if(!IsValid(victim) || !IsValid(attacker)) then return end
 
-	if(attacker:Frags() >= GetConVarNumber("ng_frags") && attacker:IsPlayer() && !gameOver) then
-		gameOver = true
+	if(attacker:IsPlayer()) then
+		if(attacker:Frags() >= GetConVarNumber("ng_frags") && !gameOver) then
+			gameOver = true
 
-		net.Start("ng_game_end")
-			net.WriteEntity(attacker)
-			net.WriteEntity(victim)
-			net.WriteInt(Pews, 16)
+			net.Start("ng_game_end")
+				net.WriteEntity(attacker)
+				net.WriteEntity(victim)
+				net.WriteInt(Pews, 16)
+				net.Broadcast()
+
+				timer.Simple(30, function()
+					game.CleanUpMap()
+					for v, k in pairs(player.GetAll()) do
+						k.gameOver = false
+						k:Spawn()
+					end
+				end)
 			net.Broadcast()
 
-			timer.Simple(30, function()
-				game.CleanUpMap()
-				for v, k in pairs(player.GetAll()) do
-					k.gameOver = false
-					k:Spawn()
+			for v, k in pairs(player.GetAll()) do
+				if(!k:Alive()) && k ~= victim then k:Spawn() end
+				k.gameOver = true
+				if(k ~= attacker) then
+					k:StripWeapons()
+					k:StripAmmo()
 				end
-			end)
-		net.Broadcast()
-
-		for v, k in pairs(player.GetAll()) do
-			if(!k:Alive()) && k ~= victim then k:Spawn() end
-			k.gameOver = true
-			if(k ~= attacker) then
-				k:StripWeapons()
-				k:StripAmmo()
 			end
 		end
 	end
@@ -95,7 +97,7 @@ function GM:PlayerDeath(victim, inflictor, attacker)
 
 	if(!victim.gameOver) then
 		timer.Simple(5, function()
-			if(!victim:Alive()) then
+			if(victim && !victim:Alive()) then
 				victim:Spawn()
 			end
 		end)

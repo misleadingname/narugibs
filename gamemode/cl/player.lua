@@ -14,10 +14,10 @@ hook.Add("CreateMove", "bunnyhop", function(uc)
 		local band = bit.band
 		local bhstop = 0xFFFF - IN_JUMP
 		
-		if lp:WaterLevel() < 2 and lp:Alive() and lp:GetMoveType() == MOVETYPE_WALK then
-			if !lp:InVehicle() and band(uc:GetButtons(), IN_JUMP) > 0 then
+		if lp:WaterLevel() < 2 && lp:Alive() && lp:GetMoveType() == MOVETYPE_WALK then
+			if !lp:InVehicle() && band(uc:GetButtons(), IN_JUMP) > 0 then
 				if lp:IsOnGround() then
-					uc:SetButtons(uc:GetButtons() or IN_JUMP)
+					uc:SetButtons(uc:GetButtons() || IN_JUMP)
 					net.Start("ng_bhop_landing", true)
 					net.SendToServer()
 				else

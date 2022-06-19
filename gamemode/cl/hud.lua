@@ -78,10 +78,10 @@ net.Receive("ng_player_death", function()
 	local victim = net.ReadEntity()
 	local attacker = net.ReadEntity()
 	
-	if(!IsValid(victim) or !IsValid(attacker)) then return end
+	if(!IsValid(victim)) then return end
 	if(LocalPlayer().gameOver) then return end
 	
-	if(victim == LocalPlayer()) then
+	if(victim == LocalPlayer() || !attacker:IsPlayer()) then
 		surface.PlaySound("buttons/combine_button2.wav")
 
 		victim:ScreenFade(SCREENFADE.OUT, Color(0, 0, 0, 255), 4, 1)
@@ -105,7 +105,7 @@ net.Receive("ng_player_death", function()
 		local deathText = vgui.Create("DLabel", deathPanel)
 		deathText:SetFont("MedFont")
 		deathText:SetColor(Color(255, 220, 0, 255))
-		if(attacker == LocalPlayer()) then
+		if(attacker == LocalPlayer() || !attacker:IsPlayer()) then
 			deathText:SetText("You commited suicide")
 		else
 			deathText:SetText("You were fragged by " .. attacker:Nick())
