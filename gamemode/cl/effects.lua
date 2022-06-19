@@ -4,7 +4,7 @@ local slowZoom = 0
 hook.Add("CalcView", "ng_calc_view", function(ply, pos, ang, fov)
 	if(!ply:IsPlayingTaunt()) then
 		if(!ply:Alive() && !ply.gameOver) then
-			slowZoom = slowZoom - 0.05
+			slowZoom = slowZoom - 8 * FrameTime()
 
 			local view = {
 				fov = slowZoom

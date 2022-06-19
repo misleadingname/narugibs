@@ -54,7 +54,7 @@ end
 function GM:PlayerDeath(victim, inflictor, attacker)
 	if(!IsValid(victim) or !IsValid(attacker)) then return end
 
-	if(attacker:Frags() >= GetConVarNumber("ng_frags") && !gameOver) then
+	if(attacker:Frags() >= GetConVarNumber("ng_frags") && attacker:IsPlayer() && !gameOver) then
 		gameOver = true
 
 		net.Start("ng_game_end")
