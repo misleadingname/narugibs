@@ -1,0 +1,44 @@
+"narugibs" {
+	"base" "base"
+	"title" "なるgibs"
+	"maps" "^ng_"
+	"category" "pvp"
+	"menusystem" "1"
+
+	"settings" {
+		1 {
+			"name" "ng_frags"
+			"text" "Frags before a map change."
+			"type" "Numeric"
+			"default" "50"
+		}
+
+		2 {
+			"name" "ng_time"
+			"text" "Seconds before a map change."
+			"type" "Numeric"
+			"default" "300"
+		}
+
+		3 {
+			"name" "ng_bhop"
+			"text" "Enable bunny hopping."
+			"type" "CheckBox"
+			"default" "1"
+		}
+
+		4 {
+			"name" "ng_dash"
+			"text" "Enable dashing."
+			"type" "CheckBox"
+			"default" "1"
+		}
+
+		5 {
+			"name" "ng_hardspeedcap"
+			"text" "Hard speed cap."
+			"type" "Numeric"
+			"default" "1000"
+		}
+	}
+}
