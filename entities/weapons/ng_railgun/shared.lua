@@ -100,14 +100,7 @@ function SWEP:SecondaryAttack()
 end
 
 function SWEP:DrawHUD()
-	if(!self.Owner.gameOver) then
-		if(self.Owner.lastShoot) then
-			local lastShootBar = math.Clamp(CurTime() - self.Owner.lastShoot, 0, 0.25) * 4
-			local colourFade = lastShootBar * 100
-	
-			draw.RoundedBox(999, 16, ScrH() - 22, lastShootBar * ScrW() - 32, 16, Color(255, 0, 0, colourFade))
-		end
-	
+	if(!self.Owner.gameOver) then	
 		draw.RoundedBox(5, ScrW() * 0.0175, ScrH() * 0.9, ScrW() * 0.12, ScrH() * 0.075, Color(0, 0, 0, 150))
 		draw.DrawText("FRAGS", "HUDFont", ScrW() * 0.0285, ScrH() * 0.94, Color(255, 220, 0, 255), TEXT_ALIGN_LEFT)
 		draw.DrawText(LocalPlayer():Frags(), "numbersFont", ScrW() * 0.07635, ScrH() * 0.905, Color(255, 220, 0, 255), TEXT_ALIGN_LEFT)
