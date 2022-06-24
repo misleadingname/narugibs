@@ -10,6 +10,9 @@ util.AddNetworkString("ng_dash_move")
 util.AddNetworkString("ng_player_death")
 util.AddNetworkString("ng_player_spawn")
 
+util.AddNetworkString("GC_KilledPlayer")
+util.AddNetworkString("GC_KilledNPC")
+
 util.AddNetworkString("ng_game_end")
 
 net.Receive("ng_bhop_landing", function(len, ply)
@@ -88,7 +91,8 @@ function GM:PlayerDeath(victim, inflictor, attacker)
 	net.Start("ng_player_death")
 		net.WriteEntity(victim)
 		net.WriteEntity(attacker)
-	net.Send({victim, attacker})
+		net.WriteEntity(inflictor)
+	net.Broadcast()
 
 	if(attacker == victim) then
 		ParticleEffect("grenade_explosion_01", victim:GetPos() + Vector(0, 0, 50), Angle(0, 0, 0))
@@ -119,4 +123,8 @@ end
 
 function GM:PlayerStartTaunt(ply, act, length)
 	ply:EmitSound("misc/rubberglove_snap.wav")
+end
+
+function GM:PlayerCanPickupWeapon(ply, wep)
+	return wep:GetClass() == "ng_railgun"
 end

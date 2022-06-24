@@ -30,19 +30,4 @@ end)
 
 function GM:PreCleanupMap()
 	LocalPlayer().gameOver = false
-
-	if(winPanel) then
-		winPanel:Remove()
-		winPanel = nil
-	end
-	
-	if(mapVotePanel) then
-		mapVotePanel:Remove()
-		mapVotePanel = nil
-	end
-	
-	if(voteButton) then
-		voteButton:Remove()
-		voteButton = nil
-	end
 end
