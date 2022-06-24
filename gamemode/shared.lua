@@ -5,6 +5,8 @@ GM.Website = "http://japannt.tk"
 
 DeriveGamemode("base")
 
-function GM:Initialize()
-	MsgN("[narugibs] What's up?")
+if(#ents.FindByClass("ng_doll") == 0) then
+	currentGamemode = "deathmatch"
+else
+	currentGamemode = "koth"
 end

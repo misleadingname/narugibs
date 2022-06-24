@@ -8,15 +8,12 @@ if(mapVotePanel) then
 	mapVotePanel = nil
 end
 
-if(voteButton) then
-	voteButton:Remove()
-	voteButton = nil
-end
-
 if(deathPanel) then
 	deathPanel:Remove()
 	deathPanel = nil
 end
+
+local introText = "なるgibs is a simple enough gamemode to learn but hard to master.\nTo bhop; simply hold spacebar, you'll see your speed go up with every jump by 100u/s.\nThe railgun is the main attraction of this gamemode, to use it, just simply left click at someone to fire it.\nDashing is a pretty simple mechanic to learn, but hard to master. In mid air, press secondary fire to dash.\nIf you manage to kill someone in air after dashing, you regain your dash."
 
 function createFonts()
 	surface.CreateFont("SmallFont", {
@@ -35,6 +32,14 @@ function createFonts()
 		additive = true,
 	})
 	
+	surface.CreateFont("MedFontBO", {
+		font = "Tahoma",
+		size = ScreenScale(12),
+		weight = 1000,
+		antialias = true,
+		additive = true,
+	})
+
 	surface.CreateFont("MedFont", {
 		font = "Tahoma",
 		size = ScreenScale(12),
@@ -43,10 +48,10 @@ function createFonts()
 		additive = true,
 	})
 
-	surface.CreateFont("MedFontNA", {
+	surface.CreateFont("BigFontBO", {
 		font = "Tahoma",
-		size = ScreenScale(12),
-		weight = 500,
+		size = ScreenScale(24),
+		weight = 1000,
 		antialias = true,
 	})
 	
@@ -73,6 +78,52 @@ function GM:OnScreenSizeChanged()
 	createFonts()
 end
 
+function GM:Initialize()
+	MsgN("[narugibs] Should be initialized")
+	if(!welcomePanel) then
+		welcomePanel = vgui.Create("DFrame")
+		welcomePanel:SetSize(ScrW() * 0.65, ScrH() * 0.5)
+		welcomePanel:ShowCloseButton(false)
+		welcomePanel:SetDraggable(false)
+		welcomePanel:SetTitle("")
+		welcomePanel:MakePopup()
+		welcomePanel:Center()
+		welcomePanel.Paint = function(self, w, h)
+			draw.RoundedBox(10, 0, 0, w, h, Color(0, 0, 0, 175))
+			draw.DrawText("Welcome to なるgibs!", "BigFontBO", w * 0.5, h * 0.105, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+			draw.DrawText("We are currently playing " .. currentGamemode .. ", on " .. game.GetMap() .. "!", "SmallFont", w * 0.5, h * 0.9, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+			
+			surface.SetFont("SmallFont")
+			local x, y = surface.GetTextSize(introText)
+
+			draw.DrawText(introText, "SmallFont", w * 0.5, h * 0.5 - y * 0.5, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+		end
+	
+		local welcomePanelCloseButton = vgui.Create("DButton", welcomePanel)
+		welcomePanelCloseButton:SetFont("MedFontBO")
+		welcomePanelCloseButton:SetColor(Color(255, 220, 0, 255))
+		welcomePanelCloseButton:SetText("Let's go!")
+		welcomePanelCloseButton:SizeToContents()
+		welcomePanelCloseButton:SetSize(welcomePanelCloseButton:GetWide() + 40, welcomePanelCloseButton:GetTall() + 20)
+		welcomePanelCloseButton:Center()
+
+		surface.SetFont("SmallFont")
+		local x, y = surface.GetTextSize("We are currently playing " .. currentGamemode .. ", on " .. game.GetMap() .. "!")
+
+		welcomePanelCloseButton:SetY((welcomePanel:GetTall() * 0.8) - (welcomePanelCloseButton:GetTall() * 0.5) - y * 0.5)
+		
+		welcomePanelCloseButton.Paint = function(self, w, h)
+			draw.RoundedBox(10, 0, 0, w, h, Color(0, 0, 0, 100))
+		end
+
+		welcomePanelCloseButton.DoClick = function()
+			welcomePanel:Remove()
+			welcomePanelCloseButton:Remove()
+			welcomePanel = nil
+			welcomePanelCloseButton = nil
+		end
+	end
+end
 
 net.Receive("ng_player_death", function()
 	local victim = net.ReadEntity()
@@ -184,13 +235,8 @@ net.Receive("ng_game_end", function()
 			draw.DrawText("Did you know that...", "MedFont", w / 2, h / 1.3125, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
 			draw.DrawText("This game the railgun was shot " .. pewCount .. " times?", "SmallFont", w / 2, h / 1.15, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
 		end
-	else
-		winPanel:Remove()
-		winPanel = nil
-	end
 
-	if(!voteButton) then
-		voteButton = vgui.Create("DButton", winPanel)
+		local voteButton = vgui.Create("DButton", winPanel)
 		voteButton:SetFont("MedFont")
 		voteButton:SetColor(Color(255, 220, 0, 255))
 		voteButton:SetText("Vote for a new map")
@@ -201,12 +247,13 @@ net.Receive("ng_game_end", function()
 		voteButton.Paint = function(self, w, h)
 			draw.RoundedBox(10, 0, 0, w, h, Color(0, 0, 0, 100))
 		end
+
 		voteButton.DoClick = function()
 			Derma_Message("Not implemented (yet!)", "TODO", "lol ok")
 		end
 	else
-		voteButton:Remove()
-		voteButton = nil
+		winPanel:Remove()
+		winPanel = nil
 	end
 end)
 
@@ -223,17 +270,3 @@ hook.Add("HUDShouldDraw", "HideHUD", function(name)
 		return false
 	end
 end)
-
-function GM:HUDPaint()
-	if(LocalPlayer():Alive() && !LocalPlayer().gameOver) then
-		surface.SetDrawColor(255, 0, 0)
-		x, y = ScrW() / 2, ScrH() / 2
-		local scale = 1
-		local gap = 5
-		local length = gap + 20
-		surface.DrawLine( x - length, y, x - gap, y )
-		surface.DrawLine( x + length, y, x + gap, y )
-		surface.DrawLine( x, y - length, x, y - gap )
-		surface.DrawLine( x, y + length, x, y + gap )
-	end
-end
