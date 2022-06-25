@@ -77,6 +77,7 @@ function GM:PlayerDeath(victim, inflictor, attacker)
 			net.Broadcast()
 
 			for v, k in pairs(player.GetAll()) do
+				if(!k:IsValid()) then continue end
 				if(!k:Alive()) && k ~= victim then k:Spawn() end
 				k.gameOver = true
 				if(k ~= attacker) then

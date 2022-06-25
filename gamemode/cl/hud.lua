@@ -231,8 +231,8 @@ net.Receive("ng_player_death", function()
 	
 	if(!IsValid(victim)) then return end
 	if(LocalPlayer().gameOver) then return end
-	
-	if(victim == LocalPlayer() || !attacker:IsPlayer()) then
+
+	if(victim == LocalPlayer()) then
 		surface.PlaySound("buttons/combine_button2.wav")
 
 		victim:ScreenFade(SCREENFADE.OUT, Color(0, 0, 0, 255), 4, 1)
