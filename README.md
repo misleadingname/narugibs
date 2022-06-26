@@ -6,7 +6,7 @@
 <hr />
 <h3>How to install:</h3>
 <p>Grab the code from the funny green button above</p>
-<p>after the zip finishes downloading, open your GMod folder and paste the entire folder into the gamemodes folder.<br><code>garrysmod/garrysmod/gamemodes</p>
+<p>after the zip finishes downloading, open your GMod folder and paste the entire folder into the gamemodes folder.<br><code>garrysmod/garrysmod/gamemodes</code></p>
 <p>Restart GMod and you should be good to go!</p>
 <hr />
 <p>issues and pull requests are welcome!</p>
