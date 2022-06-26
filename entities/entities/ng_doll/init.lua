@@ -61,7 +61,6 @@ function ENT:Initialize()
 
 	timer.Create("addScore", 0.25, 0, function()
 		if(self.HeldBy && self:IsPlayerHolding() && self.HeldBy:GetNWInt("dollPoints") < GetConVarNumber("ng_points")) then
-			print(self.HeldBy:GetNWInt("dollPoints", 0))
 			self.HeldBy:SetNWInt("dollPoints", self.HeldBy:GetNWInt("dollPoints", 0) + 1)
 		elseif(self.HeldBy:GetNWInt("dollPoints", 0) >= GetConVarNumber("ng_points")) then
 			self:Remove()
