@@ -4,13 +4,9 @@
 <p>It's mostly unfinished, and a little rough around the edges but it's a start.</p>
 <p>It is a work in progress, and I'm not sure if it will ever be finished, but hey if I find the motivation then, maybe I guess.</p>
 <hr />
-<h3>How to play:</h3>
-<p>When the game starts, the only weapon you have is a railgun. You can shoot it like any other gun.</p>
-<p>There's a dash ability, that allows you to... dash, I can't make it sound epic enough to put in the description, but it's pretty cool.</p>
-<br>
-<p>To win a game, you must get to the frag limit. (That can be set via the <code>ng_frags</code> convar.)</p>
-<p>Movement isn't really forgiving, let me explain:</p>
-<p>You can't really control yourself while dashing, you're stuck how you launched yourself, until you land. <strong>Unless</strong> you frag someone while in mid air, then you can dash again.</p>
-<p>And obviously you can't dash while in mid air, but you can dash again after landing.</p>
+<h3>How to install:</h3>
+<p>Grab the code from the funny green button above</p>
+<p>after the zip finishes downloading, open your GMod folder and paste the entire folder into the gamemodes folder.<br><code>garrysmod/garrysmod/gamemodes</p>
+<p>Restart GMod and you should be good to go!</p>
 <hr />
 <p>issues and pull requests are welcome!</p>
