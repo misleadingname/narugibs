@@ -5,7 +5,7 @@ GM.Website = "http://japannt.tk"
 
 DeriveGamemode("base")
 
-if(#ents.FindByClass("ng_doll") == 0) then
+if(!string.find(game.GetMap(), "_koth")) then
 	currentGamemode = "deathmatch"
 else
 	currentGamemode = "koth"

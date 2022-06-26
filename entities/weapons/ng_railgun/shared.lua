@@ -115,10 +115,14 @@ function SWEP:DrawHUD()
 		draw.DrawText("FRAGS", "HUDFont", ScrW() * 0.0285, ScrH() * 0.94, Color(255, 220, 0, 255), TEXT_ALIGN_LEFT)
 		draw.DrawText(LocalPlayer():Frags(), "numbersFont", ScrW() * 0.07635, ScrH() * 0.905, Color(255, 220, 0, 255), TEXT_ALIGN_LEFT)
 
-		if(gamemode == "koth") then
+		if(currentGamemode == "koth") then
 			draw.RoundedBox(5, ScrW() * 0.0175, ScrH() * 0.85, ScrW() * 0.12, ScrH() * 0.04, Color(0, 0, 0, 150))
 			draw.DrawText("SCORE:", "HUDFont", ScrW() * 0.0285, ScrH() * 0.86, Color(255, 220, 0, 255), TEXT_ALIGN_LEFT)
-			draw.DrawText(LocalPlayer():GetNWInt("dollPoints", "NO POINTS"), "HUDFont", ScrW() * 0.095, ScrH() * 0.86, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+			if(LocalPlayer():GetNWInt("dollPoints", 0) ~= 0) then
+				draw.DrawText(LocalPlayer():GetNWInt("dollPoints", "NO POINTS"), "HUDFont", ScrW() * 0.095, ScrH() * 0.86, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+			else
+				draw.DrawText("NO POINTS", "HUDFont", ScrW() * 0.095, ScrH() * 0.86, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+			end
 		end
 
 		draw.RoundedBox(5, ScrW() * 0.15, ScrH() * 0.9, ScrW() * 0.12, ScrH() * 0.075, Color(0, 0, 0, 150))

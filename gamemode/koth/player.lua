@@ -3,7 +3,6 @@ gameOver = false
 game.AddParticles("particles/GRENADE_FX.pcf")
 PrecacheParticleSystem("grenade_explosion_01")
 
-
 util.AddNetworkString("ng_bhop_landing")
 util.AddNetworkString("ng_dash_move")
 

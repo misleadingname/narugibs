@@ -8,9 +8,16 @@
 	"settings" {
 		1 {
 			"name" "ng_frags"
-			"text" "Frags before a map change."
+			"text" "(DM) Frags before to end the game."
 			"type" "Numeric"
 			"default" "50"
+		}
+
+		2 {
+			"name" "ng_points"
+			"text" "(KOTH) Points to end the game."
+			"type" "Numeric"
+			"default" "1000"
 		}
 
 		3 {

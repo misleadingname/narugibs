@@ -7,30 +7,18 @@ AddCSLuaFile("cl/hud.lua")
 
 include("shared.lua")
 
+if(!string.find(game.GetMap(), "_koth")) then
+	MsgN("[narugibs] KOTH not specified, loading deathmatch")
+	include("deathmatch/player.lua")
+else
+	MsgN("[narugibs] KOTH specified, loading King of the Hill")
+	include("koth/player.lua")
+end
+
 game.ConsoleCommand("sv_airaccelerate 9999\n")
 
 resource.AddFile("sound/le_epic_fart_lmao_gamer_sound_xdxdxdxdxd.wav")
-
-hook.Add("PlayerInitialSpawn", "gamemodepick", function()
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	print(#ents.FindByClass("ng_doll"))
-	if(#ents.FindByClass("ng_doll") == 0) then
-		MsgN("[narugibs] No dolls found, loading deathmatch")
-		include("deathmatch/player.lua")
-	else
-		MsgN("[narugibs] Doll(s) found, loading King of the Hill")
-		include("koth/player.lua")
-	end
-end)
-
+resource.AddFile("sound/alertBeep.wav")
+resource.AddFile("sound/scoreCount.wav")
 
 MsgN("[narugibs] What's up?")

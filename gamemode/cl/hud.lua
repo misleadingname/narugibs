@@ -337,7 +337,11 @@ net.Receive("ng_game_end", function()
 	winPanel.Paint = function(self, w, h)
 		draw.RoundedBox(10, 0, 0, w, h, Color(0, 0, 0, 100))
 		draw.DrawText(attackerName .. " WON THE GAME", "BigFont", w / 2, h / 8, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
-		draw.DrawText("Honourable mention goes to " .. victimName .. " for dying last.", "MedFont", w / 2, h / 3.5, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+		if(currentGamemode == "deathmatch") then
+			draw.DrawText("Honourable mention goes to " .. victimName .. " for dying last.", "MedFont", w / 2, h / 3.5, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+		else
+			draw.DrawText("I don't know what funny could go here", "MedFont", w / 2, h / 3.5, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
+		end
 
 		draw.DrawText("Did you know that...", "MedFont", w / 2, h / 1.3125, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)
 		draw.DrawText("This game the railgun was shot " .. pewCount .. " times?", "SmallFont", w / 2, h / 1.15, Color(255, 220, 0, 255), TEXT_ALIGN_CENTER)

@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "9349"
-	"mapversion" "55"
+	"mapversion" "56"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,13 +14,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "16"
+	"nGridSpacing" "64"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "55"
+	"mapversion" "56"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites"
 	"detailvbsp" "detail.vbsp"
@@ -2712,17 +2712,6 @@ world
 		editor
 		{
 			"color" "229 222 0"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	group
-	{
-		"id" "8061"
-		editor
-		{
-			"color" "229 222 0"
-			"groupid" "8072"
 			"visgroupshown" "1"
 			"visgroupautoshown" "1"
 		}
@@ -10440,20 +10429,6 @@ entity
 }
 entity
 {
-	"id" "107933"
-	"classname" "info_player_start"
-	"angles" "0 0 0"
-	"origin" "147.406 74.5644 641"
-	editor
-	{
-		"color" "0 255 0"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[2000 15500]"
-	}
-}
-entity
-{
 	"id" "108117"
 	"classname" "ng_doll"
 	"origin" "128 0 688"
@@ -10463,6 +10438,113 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[2000 -12768]"
+	}
+}
+entity
+{
+	"id" "108202"
+	"classname" "trigger_teleport"
+	"origin" "0 -128 128"
+	"spawnflags" "12"
+	"StartDisabled" "0"
+	"target" "doll_respawn"
+	solid
+	{
+		"id" "108200"
+		side
+		{
+			"id" "6389"
+			"plane" "(-2048 1920 256) (2048 1920 256) (2048 -2176 256)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6388"
+			"plane" "(-2048 -2176 0) (2048 -2176 0) (2048 1920 0)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6387"
+			"plane" "(-2048 1920 256) (-2048 -2176 256) (-2048 -2176 0)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6386"
+			"plane" "(2048 1920 0) (2048 -2176 0) (2048 -2176 256)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6385"
+			"plane" "(2048 1920 256) (-2048 1920 256) (-2048 1920 0)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "6384"
+			"plane" "(2048 -2176 0) (-2048 -2176 0) (-2048 -2176 256)"
+			"material" "TOOLS/TOOLSTRIGGER"
+			"uaxis" "[1 0 0 0] 0.25"
+			"vaxis" "[0 0 -1 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "108212"
+	"classname" "info_teleport_destination"
+	"angles" "0 0 0"
+	"targetname" "doll_respawn"
+	"origin" "128 0 704"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
 	}
 }
 cameras

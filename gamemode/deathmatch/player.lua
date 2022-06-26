@@ -3,6 +3,34 @@ gameOver = false
 game.AddParticles("particles/GRENADE_FX.pcf")
 PrecacheParticleSystem("grenade_explosion_01")
 
+function winGame(attacker, victim)
+	gameOver = true
+
+	net.Start("ng_game_end")
+		net.WriteEntity(attacker)
+		net.WriteEntity(victim)
+		net.WriteInt(Pews, 16)
+		net.Broadcast()
+
+		timer.Simple(30, function()
+			game.CleanUpMap()
+			for v, k in pairs(player.GetAll()) do
+				k.gameOver = false
+				k:Spawn()
+			end
+		end)
+	net.Broadcast()
+
+	for v, k in pairs(player.GetAll()) do
+		if(!k:IsValid()) then continue end
+		if(!k:Alive()) && k ~= victim then k:Spawn() end
+		k.gameOver = true
+		if(k ~= attacker) then
+			k:StripWeapons()
+			k:StripAmmo()
+		end
+	end
+end
 
 util.AddNetworkString("ng_bhop_landing")
 util.AddNetworkString("ng_dash_move")
@@ -59,32 +87,7 @@ function GM:PlayerDeath(victim, inflictor, attacker)
 
 	if(attacker:IsPlayer()) then
 		if(attacker:Frags() >= GetConVarNumber("ng_frags") && !gameOver) then
-			gameOver = true
-
-			net.Start("ng_game_end")
-				net.WriteEntity(attacker)
-				net.WriteEntity(victim)
-				net.WriteInt(Pews, 16)
-				net.Broadcast()
-
-				timer.Simple(30, function()
-					game.CleanUpMap()
-					for v, k in pairs(player.GetAll()) do
-						k.gameOver = false
-						k:Spawn()
-					end
-				end)
-			net.Broadcast()
-
-			for v, k in pairs(player.GetAll()) do
-				if(!k:IsValid()) then continue end
-				if(!k:Alive()) && k ~= victim then k:Spawn() end
-				k.gameOver = true
-				if(k ~= attacker) then
-					k:StripWeapons()
-					k:StripAmmo()
-				end
-			end
+			winGame(attacker, victim)
 		end
 	end
 
