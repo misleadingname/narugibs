@@ -1,8 +1,9 @@
 AddCSLuaFile("shared.lua")
 AddCSLuaFile("cl_init.lua")
 
-AddCSLuaFile("cl/player.lua")
+AddCSLuaFile("cl/scoreboard.lua")
 AddCSLuaFile("cl/effects.lua")
+AddCSLuaFile("cl/player.lua")
 AddCSLuaFile("cl/hud.lua")
 
 include("shared.lua")

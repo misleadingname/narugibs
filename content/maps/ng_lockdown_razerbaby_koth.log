@@ -1,0 +1,468 @@
+
+
+
+materialPath: D:\Steam\steamapps\common\GarrysMod\garrysmod\materials
+Loading D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.vmf
+Material not found!: ATI_2004/DETAIL/DETAILSPRITES
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_104!!!
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_104!!!
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_104!!!
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 266 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day02_09*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+*** Error: Skybox vtf files for skybox/sky_day02_09 weren't compiled with the same size texture and/or same flags!
+Can't load skybox file skybox/sky_day02_09 to build the default cubemap!
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (810810 bytes)
+Static prop models/Combine_Room/combine_wire002.mdl outside the map (-3994.00, 4686.00, 166.00)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3401 texinfos to 1295
+Reduced 503 texdatas to 330 (31074 bytes to 20363)
+Writing D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+7 seconds elapsed
+
+
+
+4 threads
+reading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+reading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.prt
+1113 portalclusters
+3080 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 1578 visible clusters (0.81%)
+Total clusters visible: 194171
+Average clusters visible: 174
+Building PAS...
+Average clusters audible: 615
+visdatasize:187956  compressed from 320544
+writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+16 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+PREP OK
+6541 faces
+1 degenerate faces
+296761 square feet [42733640.00 square inches]
+40 Displacements
+4231 Square Feet [609380.63 Square Inches]
+6540 patches before subdivision
+87632 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 13029531, max 745
+transfer lists:  99.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(232060, 420649, 347329)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(99615, 165796, 111913)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21974, 33806, 18749)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(7676, 10874, 4986)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(2078, 2691, 1015)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(675, 804, 253)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(200, 218, 57)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(64, 64, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(20, 18, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(6, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0494 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  42/4096         2016/196608   ( 1.0%) 
+brushes               2240/16384       26880/196608   (13.7%) 
+brushsides           15848/163840     126784/1310720  ( 9.7%) 
+planes                6908/65536      138160/1310720  (10.5%) 
+vertexes             11469/65536      137628/786432   (17.5%) 
+nodes                 2690/65536       86080/2097152  ( 4.1%) 
+texinfos              1295/12288       93240/884736   (10.5%) 
+texdata                330/2048        10560/65536    (16.1%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1168/0           23360/0        ( 0.0%) 
+disp_tris             1568/0            3136/0        ( 0.0%) 
+disp_lmsamples       16980/0           16980/0        ( 0.0%) 
+faces                 6541/65536      366296/3670016  (10.0%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces             4729/65536      264824/3670016  ( 7.2%) 
+leaves                2733/65536       87456/2097152  ( 4.2%) 
+leaffaces             7957/65536       15914/131072   (12.1%) 
+leafbrushes           4576/65536        9152/131072   ( 7.0%) 
+areas                    4/1024           32/8192     ( 0.4%) 
+surfedges            51129/512000     204516/2048000  (10.0%) 
+edges                32036/256000     128144/1024000  (12.5%) 
+LDR worldlights         59/8192         5192/720896   ( 0.7%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            702/32768        7020/327680   ( 2.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14895/65536       29790/131072   (22.7%) 
+cubemapsamples         147/1024         2352/16384    (14.4%) 
+overlays                 3/1024         1056/360448   ( 0.3%) 
+LDR lightdata         [variable]     6073960/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]      187956/16777216 ( 1.1%) 
+entdata               [variable]      216439/393216   (55.0%) 
+LDR ambient table     2733/65536       10932/262144   ( 4.2%) 
+HDR ambient table     2733/65536       10932/262144   ( 4.2%) 
+LDR leaf ambient      8265/65536      231420/1835008  (12.6%) 
+HDR leaf ambient      2733/65536       76524/1835008  ( 4.2%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/25090    ( 0.0%) 
+pakfile               [variable]     1444106/0        ( 0.0%) 
+physics               [variable]      810810/4194304  (19.3%) 
+physics terrain       [variable]        7064/1048576  ( 0.7%) 
+
+Level flags = 0
+
+Total triangle count: 19219
+Writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+49 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+PREP OK
+6541 faces
+1 degenerate faces
+296761 square feet [42733640.00 square inches]
+40 Displacements
+4231 Square Feet [609380.63 Square Inches]
+6540 patches before subdivision
+87632 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 13029531, max 745
+transfer lists:  99.4 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(232060, 420649, 347329)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(99615, 165796, 111913)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21974, 33806, 18749)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(7676, 10874, 4986)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(2078, 2691, 1015)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(675, 804, 253)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(200, 218, 57)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(64, 64, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(20, 18, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(6, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0357 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  42/4096         2016/196608   ( 1.0%) 
+brushes               2240/16384       26880/196608   (13.7%) 
+brushsides           15848/163840     126784/1310720  ( 9.7%) 
+planes                6908/65536      138160/1310720  (10.5%) 
+vertexes             11469/65536      137628/786432   (17.5%) 
+nodes                 2690/65536       86080/2097152  ( 4.1%) 
+texinfos              1295/12288       93240/884736   (10.5%) 
+texdata                330/2048        10560/65536    (16.1%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1168/0           23360/0        ( 0.0%) 
+disp_tris             1568/0            3136/0        ( 0.0%) 
+disp_lmsamples       16980/0           16980/0        ( 0.0%) 
+faces                 6541/65536      366296/3670016  (10.0%) 
+hdr faces             6541/65536      366296/3670016  (10.0%) 
+origfaces             4729/65536      264824/3670016  ( 7.2%) 
+leaves                2733/65536       87456/2097152  ( 4.2%) 
+leaffaces             7957/65536       15914/131072   (12.1%) 
+leafbrushes           4576/65536        9152/131072   ( 7.0%) 
+areas                    4/1024           32/8192     ( 0.4%) 
+surfedges            51129/512000     204516/2048000  (10.0%) 
+edges                32036/256000     128144/1024000  (12.5%) 
+LDR worldlights         59/8192         5192/720896   ( 0.7%) 
+HDR worldlights         59/8192         5192/720896   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            702/32768        7020/327680   ( 2.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14895/65536       29790/131072   (22.7%) 
+cubemapsamples         147/1024         2352/16384    (14.4%) 
+overlays                 3/1024         1056/360448   ( 0.3%) 
+LDR lightdata         [variable]     6073960/0        ( 0.0%) 
+HDR lightdata         [variable]     6073960/0        ( 0.0%) 
+visdata               [variable]      187956/16777216 ( 1.1%) 
+entdata               [variable]      216439/393216   (55.0%) 
+LDR ambient table     2733/65536       10932/262144   ( 4.2%) 
+HDR ambient table     2733/65536       10932/262144   ( 4.2%) 
+LDR leaf ambient      8265/65536      231420/1835008  (12.6%) 
+HDR leaf ambient      8265/65536      231420/1835008  (12.6%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/25090    ( 0.0%) 
+pakfile               [variable]     1444106/0        ( 0.0%) 
+physics               [variable]      810810/4194304  (19.3%) 
+physics terrain       [variable]        7064/1048576  ( 0.7%) 
+
+Level flags = 0
+
+Total triangle count: 19219
+Writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+48 seconds elapsed
+
+
+
+materialPath: D:\Steam\steamapps\common\GarrysMod\garrysmod\materials
+Loading D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.vmf
+Material not found!: ATI_2004/DETAIL/DETAILSPRITES
+ConVarRef mat_reduceparticles doesn't point to an existing ConVar
+fixing up env_cubemap materials on brush sides...
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_204!!!
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_204!!!
+Multiple references for cubemap on texture maps/ng_lockdown_razerbaby_koth/plaster/plasterwall034c_-2880_4352_204!!!
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (1)
+Find Visible Detail Sides...
+Merged 258 detail faces...done (1)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day02_09*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+*** Error: Skybox vtf files for skybox/sky_day02_09 weren't compiled with the same size texture and/or same flags!
+Can't load skybox file skybox/sky_day02_09 to build the default cubemap!
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (810762 bytes)
+Static prop models/Combine_Room/combine_wire002.mdl outside the map (-3994.00, 4686.00, 266.00)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 3401 texinfos to 1289
+Reduced 503 texdatas to 330 (31161 bytes to 20424)
+Writing D:\Steam\steamapps\common\GarrysMod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+8 seconds elapsed
+
+
+
+4 threads
+reading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+reading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.prt
+1124 portalclusters
+3098 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 1750 visible clusters (0.86%)
+Total clusters visible: 203538
+Average clusters visible: 181
+Building PAS...
+Average clusters audible: 620
+visdatasize:191490  compressed from 323712
+writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+19 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+PREP OK
+6554 faces
+2 degenerate faces
+296761 square feet [42733612.00 square inches]
+40 Displacements
+4231 Square Feet [609361.63 Square Inches]
+6552 patches before subdivision
+86812 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 12881018, max 736
+transfer lists:  98.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(231144, 417915, 344636)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(98512, 163440, 110063)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21862, 33543, 18572)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(7622, 10764, 4926)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(2069, 2672, 1006)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(672, 798, 250)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(199, 216, 57)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(64, 64, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(20, 18, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(6, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0507 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  42/4096         2016/196608   ( 1.0%) 
+brushes               2240/16384       26880/196608   (13.7%) 
+brushsides           15847/163840     126776/1310720  ( 9.7%) 
+planes                6972/65536      139440/1310720  (10.6%) 
+vertexes             11491/65536      137892/786432   (17.5%) 
+nodes                 2701/65536       86432/2097152  ( 4.1%) 
+texinfos              1289/12288       92808/884736   (10.5%) 
+texdata                330/2048        10560/65536    (16.1%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1168/0           23360/0        ( 0.0%) 
+disp_tris             1568/0            3136/0        ( 0.0%) 
+disp_lmsamples       16980/0           16980/0        ( 0.0%) 
+faces                 6554/65536      367024/3670016  (10.0%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces             4724/65536      264544/3670016  ( 7.2%) 
+leaves                2744/65536       87808/2097152  ( 4.2%) 
+leaffaces             8134/65536       16268/131072   (12.4%) 
+leafbrushes           4593/65536        9186/131072   ( 7.0%) 
+areas                    4/1024           32/8192     ( 0.4%) 
+surfedges            51133/512000     204532/2048000  (10.0%) 
+edges                32049/256000     128196/1024000  (12.5%) 
+LDR worldlights         59/8192         5192/720896   ( 0.7%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            705/32768        7050/327680   ( 2.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14967/65536       29934/131072   (22.8%) 
+cubemapsamples         147/1024         2352/16384    (14.4%) 
+overlays                 3/1024         1056/360448   ( 0.3%) 
+LDR lightdata         [variable]     6106020/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]      191490/16777216 ( 1.1%) 
+entdata               [variable]      216895/393216   (55.2%) 
+LDR ambient table     2744/65536       10976/262144   ( 4.2%) 
+HDR ambient table     2744/65536       10976/262144   ( 4.2%) 
+LDR leaf ambient      8021/65536      224588/1835008  (12.2%) 
+HDR leaf ambient      2744/65536       76832/1835008  ( 4.2%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/25122    ( 0.0%) 
+pakfile               [variable]     1444417/0        ( 0.0%) 
+physics               [variable]      810762/4194304  (19.3%) 
+physics terrain       [variable]        7064/1048576  ( 0.7%) 
+
+Level flags = 0
+
+Total triangle count: 19222
+Writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+50 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+PREP OK
+6554 faces
+2 degenerate faces
+296761 square feet [42733612.00 square inches]
+40 Displacements
+4231 Square Feet [609361.63 Square Inches]
+6552 patches before subdivision
+86812 patches after subdivision
+61 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 12881018, max 736
+transfer lists:  98.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(231144, 417915, 344636)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(98512, 163440, 110063)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(21862, 33543, 18572)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(7622, 10764, 4926)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(2069, 2672, 1006)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(672, 798, 250)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(199, 216, 57)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(64, 64, 14)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(20, 18, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(6, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(2, 2, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #12 added RGB(1, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0383 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  42/4096         2016/196608   ( 1.0%) 
+brushes               2240/16384       26880/196608   (13.7%) 
+brushsides           15847/163840     126776/1310720  ( 9.7%) 
+planes                6972/65536      139440/1310720  (10.6%) 
+vertexes             11491/65536      137892/786432   (17.5%) 
+nodes                 2701/65536       86432/2097152  ( 4.1%) 
+texinfos              1289/12288       92808/884736   (10.5%) 
+texdata                330/2048        10560/65536    (16.1%) 
+dispinfos               40/0            7040/0        ( 0.0%) 
+disp_verts            1168/0           23360/0        ( 0.0%) 
+disp_tris             1568/0            3136/0        ( 0.0%) 
+disp_lmsamples       16980/0           16980/0        ( 0.0%) 
+faces                 6554/65536      367024/3670016  (10.0%) 
+hdr faces             6554/65536      367024/3670016  (10.0%) 
+origfaces             4724/65536      264544/3670016  ( 7.2%) 
+leaves                2744/65536       87808/2097152  ( 4.2%) 
+leaffaces             8134/65536       16268/131072   (12.4%) 
+leafbrushes           4593/65536        9186/131072   ( 7.0%) 
+areas                    4/1024           32/8192     ( 0.4%) 
+surfedges            51133/512000     204532/2048000  (10.0%) 
+edges                32049/256000     128196/1024000  (12.5%) 
+LDR worldlights         59/8192         5192/720896   ( 0.7%) 
+HDR worldlights         59/8192         5192/720896   ( 0.7%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips            705/32768        7050/327680   ( 2.2%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices         14967/65536       29934/131072   (22.8%) 
+cubemapsamples         147/1024         2352/16384    (14.4%) 
+overlays                 3/1024         1056/360448   ( 0.3%) 
+LDR lightdata         [variable]     6106020/0        ( 0.0%) 
+HDR lightdata         [variable]     6106020/0        ( 0.0%) 
+visdata               [variable]      191490/16777216 ( 1.1%) 
+entdata               [variable]      216895/393216   (55.2%) 
+LDR ambient table     2744/65536       10976/262144   ( 4.2%) 
+HDR ambient table     2744/65536       10976/262144   ( 4.2%) 
+LDR leaf ambient      8021/65536      224588/1835008  (12.2%) 
+HDR leaf ambient      8021/65536      224588/1835008  (12.2%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/25122    ( 0.0%) 
+pakfile               [variable]     1444417/0        ( 0.0%) 
+physics               [variable]      810762/4194304  (19.3%) 
+physics terrain       [variable]        7064/1048576  ( 0.7%) 
+
+Level flags = 0
+
+Total triangle count: 19222
+Writing d:\steam\steamapps\common\garrysmod\garrysmod\gamemodes\narugibs\content\maps\ng_lockdown_razerbaby_koth.bsp
+51 seconds elapsed

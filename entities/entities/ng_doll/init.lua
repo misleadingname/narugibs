@@ -40,6 +40,7 @@ end
 
 ENT.HeldBy = nil
 ENT.InitPosition = nil
+local penaltyCounter = 0
 
 function ENT:Initialize()
 	if(currentGamemode ~= "koth") then self:Remove() end
@@ -68,6 +69,11 @@ function ENT:Initialize()
 		end
 	end)
 	timer.Stop("addScore")
+
+	timer.Create("spamPenaltyClear", 1, 1, function()
+		penaltyCounter = 0
+	end)
+	timer.Stop("spamPenaltyClear")
 end
 
 function ENT:OnTakeDamage(dmg)
@@ -75,20 +81,33 @@ function ENT:OnTakeDamage(dmg)
 end
 
 function ENT:Use(ply) 
-	if(self:IsPlayerHolding()) then return end
-	self.HeldBy = ply
-	ply:PickupObject(self)
+	if(!self:IsPlayerHolding() && self.HeldBy == nil) then
+		self.HeldBy = ply
+		penaltyCounter = penaltyCounter + 1
 
-	timer.Start("addScore")
+		timer.Start("spamPenaltyClear")
 
-	net.Start("ng_doll_grab")
-		net.WriteEntity(ply)
-	net.Broadcast()
+		if(penaltyCounter >= 5) then
+			self.HeldBy:Kick("You have been kicked for spamming the doll.")
+			penaltyCounter = 0
+		end
+
+		ply:PickupObject(self)
+
+		timer.Start("addScore")
+
+		net.Start("ng_doll_grab")
+			net.WriteEntity(ply)
+		net.Broadcast()
+	end
 end
 
 hook.Add("OnPlayerPhysicsDrop", "ng_doll_drop", function(ply, ent)
 	if(ent:GetClass() == "ng_doll") then
-		ent.HeldBy = nil
+		timer.Simple(0.5, function()
+			ent.HeldBy = nil
+		end)
+
 		timer.Stop("addScore")
 		net.Start("ng_doll_drop")
 			net.WriteEntity(ply)
