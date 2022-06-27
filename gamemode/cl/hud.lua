@@ -266,7 +266,7 @@ net.Receive("ng_player_death", function()
 	elseif(attacker == LocalPlayer()) then
 		surface.PlaySound("plats/elevbell1.wav")
 
-		if(LocalPlayer():Frags() < GetConVar("ng_frags"):GetInt()) then
+		if(LocalPlayer():Frags()) then
 			local fragPanel = vgui.Create("DPanel")
 			fragPanel:SetSize(ScrW() * 0.25, ScrH() * 0.125)
 			fragPanel:Center()

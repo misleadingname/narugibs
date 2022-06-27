@@ -39,6 +39,7 @@ function winGame(attacker, victim)
 end
 
 ENT.HeldBy = nil
+ENT.LastHeld = nil
 ENT.InitPosition = nil
 local penaltyCounter = 0
 
@@ -83,11 +84,14 @@ end
 function ENT:Use(ply) 
 	if(!self:IsPlayerHolding() && self.HeldBy == nil) then
 		self.HeldBy = ply
-		penaltyCounter = penaltyCounter + 1
 
 		timer.Start("spamPenaltyClear")
 
-		if(penaltyCounter >= 5) then
+		if(self.HeldBy == self.LastHeld) then
+			penaltyCounter = penaltyCounter + 1
+		end
+
+		if(penaltyCounter >= 20) then
 			self.HeldBy:Kick("You have been kicked for spamming the doll.")
 			penaltyCounter = 0
 		end
@@ -104,6 +108,7 @@ end
 
 hook.Add("OnPlayerPhysicsDrop", "ng_doll_drop", function(ply, ent)
 	if(ent:GetClass() == "ng_doll") then
+		ent.LastHeld = ply
 		timer.Simple(0.5, function()
 			ent.HeldBy = nil
 		end)
