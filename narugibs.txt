@@ -10,14 +10,14 @@
 			"name" "ng_frags"
 			"text" "(DM) Frags before to end the game."
 			"type" "Numeric"
-			"default" "50"
+			"default" "25"
 		}
 
 		2 {
 			"name" "ng_points"
 			"text" "(KOTH) Points to end the game."
 			"type" "Numeric"
-			"default" "1000"
+			"default" "250"
 		}
 
 		3 {
